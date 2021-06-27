@@ -1,0 +1,156 @@
+.section {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.chair {
+  &__heading {
+    color: brown;
+  }
+}
+
+.shoes {
+  &__card {
+    color: black;
+    padding: 1rem;
+    height: 100vh;
+    background-color: whitesmoke;
+    box-shadow: 0px -4px 20px rgba($color: #000000, $alpha: 0.2);
+
+    &__box {
+      background-color: white;
+      padding: 3rem;
+      width: 28rem;
+      height: 39rem;
+      border-radius: 5px;
+
+      box-shadow: 0px -1px 15px rgba($color: #000000, $alpha: 0.1);
+      & > * {
+        margin-bottom: 2.8rem;
+      }
+    }
+  }
+
+  &__text {
+    h1 {
+      font-weight: bolder;
+    
+    }   
+    
+    p {
+      opacity: 0.4;
+      font-size: .85rem;
+    }
+  }
+  &__sizes {
+    button {
+      text-transform: uppercase !important;
+      margin-right: 1rem;
+    }
+  }
+  &__color {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    a {
+      width: 2.8rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #a {
+      background-color: #9ddfd3;
+      color: transparent;
+    }
+    #b {
+      background-color: #9ede73;
+      color: transparent;
+    }
+    #c {
+      background-color: #ce1212;
+      color: transparent;
+    }
+    #d {
+      background-color: #ffcc29;
+      color: transparent;
+    }
+    #e {
+      background-color: #151515;
+      color: transparent;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    &--2 {
+      transition: all 0.5s ease-in-out;
+      height: 30rem;
+      transform: scaleX(-1) rotate(40deg) scale(0.9);
+      filter: drop-shadow(0.35rem 0.35rem 0.6rem rgba(0, 0, 0, 0.1));
+
+      &:hover {
+        transform: scaleX(-1) rotate(0deg) scale(1.1);
+      }
+    }
+  }
+}
+
+.active {
+  border: 10px solid red;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+
+  &__heading {
+    position: relative;
+    flex: 1;
+
+    &::after {
+      content: "";
+      height: 70%;
+      width: 4px;
+      opacity: 0.3;
+      background: #ff8303;
+      // border: 10px solid black;
+      position: absolute;
+      top: 20%;
+      right: 30px;
+    }
+
+    h1 {
+      text-shadow: 0px 10px 20px rgba($color: #000000, $alpha: 0.2);
+      font-size: 23rem;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    padding: 2rem;
+    & > * {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    p {
+      width: 30rem;
+      text-transform: lowercase;
+      font-size: 15px;
+      opacity: 0.5;
+    }
+    //
+  }
+}
